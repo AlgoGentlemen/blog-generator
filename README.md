@@ -26,5 +26,5 @@ This is the blog generator for [AlgoGentlemen](https://github.com/AlgoGentlemen/
 `hexo clean`
 
 
-## What if I want to modify blog maunually?
+## What if I want to use my own CSS?
 ![](./kick-dog.gif)
