@@ -3,8 +3,9 @@ This is the blog generator for [AlgoGentlemen](https://github.com/AlgoGentlemen/
 
 ## Initialization
 1. install `npm`
-2. clone this repo
-3. enter this repo's diretory and run `npm install`
+2. install hexo: `npm install -g hexo-cli`
+3. clone this repo
+4. enter this repo's diretory and run `npm install`
 
 ## Quick Start
 
