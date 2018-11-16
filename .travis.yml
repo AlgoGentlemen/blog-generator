@@ -21,7 +21,7 @@ script:
 after_script:
   - cd ./public
   - git init
-  - git config --global user.name "$GIT_Name"
+  - git config --global user.name "$GIT_NAME"
   - git config --global user.email "$GIT_EMAIL"
   - git add .
   - git commit -m "Auto Update Blog"
