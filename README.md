@@ -18,7 +18,7 @@ This is the blog generator for [CSGentlemen](https://github.com/CSGentlemen/csge
 
 `hexo generate` or `hexo g`
 
-### Push to algogentlemen.github.io
+### Push to csgentlemen.github.io
 
 `hexo deploy` or `hexo d`
 
