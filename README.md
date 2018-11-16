@@ -1,5 +1,5 @@
 # Blog Generator
-This is the blog generator for [AlgoGentlemen](https://github.com/AlgoGentlemen/algogentlemen.github.io)
+This is the blog generator for [AlgoGentlemen](https://github.com/AlgoGentlemen/algogentlemen.github.io) [![Build Status](https://travis-ci.org/AlgoGentlemen/blog-generator.svg?branch=master)](https://travis-ci.org/AlgoGentlemen/blog-generator)
 
 ## Initialization
 1. install `npm`
