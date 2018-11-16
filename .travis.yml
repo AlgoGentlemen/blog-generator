@@ -4,7 +4,7 @@ node_js: stable
 # S: Build Lifecycle
 install:
   - npm install -g hexo-cli
-  - npm install
+  - npm install -f
 #  - npm install hexo-generator-searchdb --save
 
 #before_script:
