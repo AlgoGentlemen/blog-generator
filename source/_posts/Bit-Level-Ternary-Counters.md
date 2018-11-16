@@ -11,6 +11,7 @@ tags:
 For every bit, we could count the number of ones to determine that bit of the single number. Clearly, there is no need to employ correlations between bits. So we could simply generalize the counting method to anything that has a binary representation. As several bits (in our case, 2 bits) is enough to capture the useful information, we only needs 2*32 bits (in this case) to store the counters. Consequently, two 32-bit integers has provided enough space for our problem.
 
 There are many ways to represent the 32 counters:
+
 1. We could store 16 counters in one integer and the rest in the other integer. To make it simple, we choose one to count odd bits and the other to count even bits. 
 1. We could store lower bits in one number and higher bits in the other number. This method could better take advantage of bitwise operations, as it has bit to bit correspondence between numbers and low/high counters.
 
