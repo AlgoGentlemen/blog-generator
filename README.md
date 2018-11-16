@@ -1,11 +1,12 @@
 # Blog Generator
-This is the blog generator for [AlgoGentlemen](https://github.com/AlgoGentlemen/algogentlemen.github.io) [![Build Status](https://travis-ci.org/AlgoGentlemen/blog-generator.svg?branch=master)](https://travis-ci.org/AlgoGentlemen/blog-generator)
+
+This is the blog generator for [CSGentlemen](https://github.com/CSGentlemen/csgentlemen.github.io) [![Build Status](https://travis-ci.org/CSGentlemen/blog-generator.svg?branch=master)](https://travis-ci.org/CSGentlemen/blog-generator)
 
 ## Initialization
-1. install `npm`
-2. install hexo: `npm install -g hexo-cli`
-3. clone this repo
-4. enter this repo's diretory and run `npm install`
+
+1. install `Node.js` and `npm`
+2. clone this repo: `git clone https://github.com/CSGentlemen/blog-generator.git`
+3. `cd blog-generator && ./init.sh`
 
 ## Quick Start
 
@@ -25,6 +26,6 @@ This is the blog generator for [AlgoGentlemen](https://github.com/AlgoGentlemen/
 
 `hexo clean`
 
-
 ## What if I want to use my own CSS?
-![](./kick-dog.gif)
+
+![QAQ](./kick-dog.gif)
