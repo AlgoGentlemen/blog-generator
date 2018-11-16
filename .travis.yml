@@ -1,11 +1,12 @@
 language: node_js
-node_js: stable
+node_js:
+- "11.1"
 
 # S: Build Lifecycle
 install:
   - apt-get install pandoc
   - npm install -g hexo-cli
-  - npm install
+  - npm install -f
 #  - npm install hexo-generator-searchdb --save
 
 #before_script:
