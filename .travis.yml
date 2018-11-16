@@ -21,14 +21,14 @@ script:
 after_script:
   - cd ./public
   - git init
-  - git config user.name "Peijun Zhu"
-  - git config user.email "zpj@gatech.edu"
+  - git config user.name "$GIT_Name"
+  - git config user.email "$GIT_EMAIL"
   - git add .
-  - git commit -m "Update Blog"
+  - git commit -m "Auto Update Blog"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 # E: Build LifeCycle
 
 env:
   global:
     - GH_REF: github.com/AlgoGentlemen/algogentlemen.github.io.git
-    - secure: "pr/WbceAU6qIzFjpyimDbd1GneZcyn4r7KAdbDxCqoXmExuWulLJkAXkpsnjTYtmCbssFlrZb3Iiwax0AXIQXZSmgM96Va4jaZBxvdIhNYyB9vQ+e/i7YlviHA9oFtIjUSdiXCW5JA4FWPS/O15lmyVDcTINvB/rgBO6GFOYcKZ/2a5O1k336AO66NWBYIoQGsCAnXzExzmKAGt6KGQbpje4bPm/+Txv9kAPQOf7dcyL3qV30SE6wzLNFPqNyjr39iaA/DR9WwZKq3AxNVyehlJ5XqPJcoYH8nHaH9rvtv49el+nDSCTD+62pCrgjNaIFR5onn54khJ4qJZSbh9Njc1FUWv9+0CqZdn3KogkZzd5W6+rH0knuFbeK6RfgCQri7eCiwhcCXerZ+FHsCjjqxhLxVgds1VXDcckje78L446ExAXSFL2d9gj4BD0CfpHFbFhhDKnQHvb6OYRlTK5UEWL50dpN2uLBWCstuCN1tuqELcFept8FVKoPOpRSarLXVegiD6Cv82b92maYIBN/9HMzhTjYIod/Z5aD7OEMFOCs4FIVEgS6HgLSh8197l8B1vU/uFfxGYhko3/b9E6OVAd1cA4CWI/Pc3Di7WzMbpmffXd17Q5Yo+A//SfrzYlXVwB8pcb5IXl3SWL/jKqxNyRVG2GWQXiN1okdwuf83E="
+    - secure: "CPjDA3BWq7VxkvgUl1IdMlCI5u9HJE5OAHY3xxXbpyZZaBWvQNpjfV+kx2/cUg2qRGfPnEnQ8m/hM2najhO/vJN8vvLkCkrzCuPxHDzX2ij4e7XY6ZLMUzUV8Pk1s2i3LamuHFWo0/8aDTsErAVKKaJERfu49p8j+pNASUePijYAlT6gg0NJ+9ODtQanvzQ5IkgnaPl8QDXvCMFvDRTjVocN1x+yAkvStXXBYU9gzuLDfxPTv99Oz9tGZQRVOZ0UyQcriGy3zRwQXNnrbQuQk3QDvSPcK04ljtpzzpZAGXbJwA/due7sIimWVuljuU3jFhCmqlKgMDr+e9e5G4wVLntzZ5nC7AxGSlzD58NHgmXL4AWoza9kwWG/GecbLnBIYyur9fFx3wSwVmqEb5ysDet4SnwUZvNEMxUhKrikrh+jfZqoxCcKYfKnT/V4YCpF8fEfD9VqoPHOTyYMHfO5k/6IQMT8IkEiaaP1Hckn9Ujx1dMMewNEo3BsfSpI6GOcKKpy5ihvK/0IH1UKDvvZEsbABwMknlIa9ghjkwdWlbfh0PBQ0w+4Fg8D7cut7fq5Gx+lurA/EpdiitApSsibC8Ic/HkcpkKCecGNl4x9OIWL9dc9cjXey2dKhvldnNbC6McRS/aVm0aua6edPbK3pR1438fsMGpfiMz9UlpF+WE="
