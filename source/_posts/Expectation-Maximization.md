@@ -22,6 +22,7 @@ Parameter $\theta$
 
 **Procedure**
 Note: $\theta_i$ is the value of i-th iteration's parameter $\theta$.
+
 1. Select an initial $\theta_0$
 2. (i+1)-th **E** step: compute $$ \begin{align} Q(\theta,\theta_i) &= E_Z[\ln p(X,Z\mid \theta)|X,\theta_i] \\ &= \sum_Z \ln p(X,Z\mid \theta) p(Z\mid X,\theta_i) \end{align}$$
 3. (i+1)-th **M** step: compute $\theta_{i+1} = \underset{\theta}{\text{argmax}} Q(\theta, \theta_i)$
