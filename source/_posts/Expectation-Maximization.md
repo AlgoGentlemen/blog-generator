@@ -12,15 +12,21 @@ Maximize the likelihood $$p(X\mid \theta) = \sum_Z p(X,Z\mid \theta)$$
 # EM Algorithm
 
 **Input**
+
 Observation **X**
+
 Latent variable **Z**
+
 Joint distribution $p(X,Z\mid \theta)$
+
 Conditional distribution $p(Z\mid X, \theta)$
 
 **Output**
+
 Parameter $\theta$
 
 **Procedure**
+
 Note: $\theta_i$ is the value of i-th iteration's parameter $\theta$.
 
 1. Select an initial $\theta_0$
