@@ -2,10 +2,11 @@ dist: xenial
 language: node_js
 node_js:
 - "11.1"
+pandoc_version: 2.2
 
 # S: Build Lifecycle
 install:
-  - wget --quiet --output-document=- https://github.com/jgm/pandoc/releases/download/2.4/pandoc-2.4-1-amd64.deb | sudo dpkg --install -
+#  - wget --quiet --output-document=- https://github.com/jgm/pandoc/releases/download/2.4/pandoc-2.4-1-amd64.deb | sudo dpkg --install -
   - npm install -g hexo-cli
   - npm install -f
 #  - npm install hexo-generator-searchdb --save
