@@ -6,8 +6,9 @@ pandoc_version: 2.2
 
 # S: Build Lifecycle
 install:
-  - wget https://github.com/jgm/pandoc/releases/download/2.4/pandoc-2.4-1-amd64.deb 
-  - sudo dpkg -i ./pandoc-2.4-1-amd64.deb
+  # - wget https://github.com/jgm/pandoc/releases/download/2.4/pandoc-2.4-1-amd64.deb 
+  # - sudo dpkg -i ./pandoc-2.4-1-amd64.deb
+  - sudo apt-get install pandoc
   - npm install -g hexo-cli
   - npm install -f
 #  - npm install hexo-generator-searchdb --save
