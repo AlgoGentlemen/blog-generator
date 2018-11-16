@@ -5,7 +5,9 @@ tags:
 ---
 
 This is some articles that we are interested in writing:
+
 + Eulerian Path and its applications like passcode (e.g. crack the safe)
++ Binary Search
 + Prefix Sums and probably Binary Indexed Trees
 + Dynamic Programming
 + Onepass Algorithms (one pass after preprocessing: lc316)
