@@ -1,0 +1,28 @@
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+  - npm install hexo-generator-searchdb --save
+
+#before_script:
+
+script:
+  - hexo clean && hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "Peijun Zhu"
+  - git config user.email "zpj@gatech.edu"
+  - git add .
+  - git commit -m "Update Blog"
+  - git push --force --quiet "https://${GIT_HUB_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+env:
+  global:
+    - GH_REF: github.com/AlgoGentlemen/algogentlemen.github.io.git
+    - secure: "OP97ylOYKoJ9MPpPr33p8WYK/eke59wnUgP1/TcBkBIUpRj2Tpkoi0NMFVnqdkJ5c7msmp13uiTr2I1r+2CkaS1xIZTiFlLCUD4L9pvjhfK660Z5pHZ3CSScN41iYzhM8NlcJAVon5+55aj21zsOz4MzlHVSAZLQYOGQpB9NBWyGijtq1uBrABpkqVxH9a2vB7OIdN8oLoqlzRwGAkm3ojVTepIiXPcSXq4uBRGvQ7NTPhtonGZKRZTCn4eh3VL9dW2RoVdYHc1T0Qly9xn/DfBz/feA6zkZbkCOvWlt42Uvu1MQYjXfXNN3fC11NJxfY2hE88NCr3CpPjbrP5j5edb8TjMAqmStu/6D1Bfq+BW3iAKDKl6aMKt9l2UwC8qjPJ3DPk0838vHizaqamexR3l1nLP3pAqKa3EATkaDEXl39JEW8RonekZ4dn1YKK2AgqL+oIfI7/UR35yypuRgFfrdmQRSkKmKkcedR17+D68QxSgyfSEz4Eq7E4XRowz4twKK9bVV906Wmqz3bzOYLoxaHrBIAamV1tZrPMYQ5/Rg2tEep74KJreM7ORCsXWJ981n5wR6AV3R/VmkiIgYdEbhbe39DOOEn2VkyDdSqLa6vAf5VvslIqK+XNkbH28wrNF2/gambAzq7XAtTnMIl6KM16kPpLUsA9NWDufdTBs="
+
