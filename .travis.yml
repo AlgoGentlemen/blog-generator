@@ -2,6 +2,7 @@ dist: xenial
 language: node_js
 node_js:
 - "11.1"
+pandoc_version: 2.2
 
 # S: Build Lifecycle
 install:
