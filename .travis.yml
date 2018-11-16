@@ -10,7 +10,8 @@ install:
 #before_script:
 
 script:
-  - hexo clean && hexo g
+  - hexo clean
+  - hexo g
 
 after_script:
   - cd ./public
