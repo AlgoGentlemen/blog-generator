@@ -21,7 +21,7 @@ This method needs shift operations to align high bits and low bits. Which is not
 unsigned odd32=0x55555555;
 unsigned ternary_add32(unsigned S, unsigned a){
     int lo = ~(S>>1) & (S^a) & odd32;
-    int hi = (S^(S>>1)) & ~(S^a) & odd32;
+    int hi = ~lo & ((S>>1)^a) & odd32;
     return (hi<<1)|lo;
 }
 
