@@ -30,5 +30,5 @@ after_script:
 
 env:
   global:
-    - GH_REF: github.com/AlgoGentlemen/algogentlemen.github.io.git
+    - GH_REF: github.com/CSGentlemen/csgentlemen.github.io.git
     - secure: "CPjDA3BWq7VxkvgUl1IdMlCI5u9HJE5OAHY3xxXbpyZZaBWvQNpjfV+kx2/cUg2qRGfPnEnQ8m/hM2najhO/vJN8vvLkCkrzCuPxHDzX2ij4e7XY6ZLMUzUV8Pk1s2i3LamuHFWo0/8aDTsErAVKKaJERfu49p8j+pNASUePijYAlT6gg0NJ+9ODtQanvzQ5IkgnaPl8QDXvCMFvDRTjVocN1x+yAkvStXXBYU9gzuLDfxPTv99Oz9tGZQRVOZ0UyQcriGy3zRwQXNnrbQuQk3QDvSPcK04ljtpzzpZAGXbJwA/due7sIimWVuljuU3jFhCmqlKgMDr+e9e5G4wVLntzZ5nC7AxGSlzD58NHgmXL4AWoza9kwWG/GecbLnBIYyur9fFx3wSwVmqEb5ysDet4SnwUZvNEMxUhKrikrh+jfZqoxCcKYfKnT/V4YCpF8fEfD9VqoPHOTyYMHfO5k/6IQMT8IkEiaaP1Hckn9Ujx1dMMewNEo3BsfSpI6GOcKKpy5ihvK/0IH1UKDvvZEsbABwMknlIa9ghjkwdWlbfh0PBQ0w+4Fg8D7cut7fq5Gx+lurA/EpdiitApSsibC8Ic/HkcpkKCecGNl4x9OIWL9dc9cjXey2dKhvldnNbC6McRS/aVm0aua6edPbK3pR1438fsMGpfiMz9UlpF+WE="
