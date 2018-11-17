@@ -6,7 +6,7 @@ tags:
 
 > From [Wikipedia](https://en.wikipedia.org/wiki/Travelling_salesman_problem): The travelling salesman problem (TSP) asks the following question: "Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city?" It is an NP-hard problem in combinatorial optimization, important in operations research and theoretical computer science. 
 
-Let's consider a variant of TSP problem such that we fix the first city and the last city of this travel and there in total $n+2$ cities. 
+Let's consider a variant of TSP problem such that we fix the first city and the last city of this travel and there are $n+2$ cities in total.
 
 The naive brute force method to solve TSP problem has $O((n+1)!)$ time complexity and $O(n)$ extra space. In this post, we introduce an DP algorithm that works in $O(n^2 2^n)$ time complexity and $O(n 2^n)$ space complexity. There are also other methods like branch and bound method that we would not cover in this post.
 
