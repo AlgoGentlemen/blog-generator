@@ -31,7 +31,8 @@ We use a 32-bit integer to represent the set of cities (less than 32). Existence
 It is obvious that one state only has dependency on other state with a smaller set of cities, which corresponds to a smaller integer in our representation. So we enumerate all set of travelled cities by ascending order of their integer i.e. $0,1,2,\ldots 2^n-1$.
 
 ## Code
-```pyinf = float('inf')
+```py
+inf = float('inf')
 def highbit_range(n):
     for h in range(n):
         for i in range(1<<h, 1<<(h+1)):
