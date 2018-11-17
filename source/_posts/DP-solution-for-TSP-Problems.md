@@ -9,7 +9,7 @@ mathjax: true
 
 Let's consider a variant of TSP problem such that we fix the first city and the last city of this travel and there are $n+2$ cities in total.
 
-The naive brute force method to solve TSP problem has $O((n+1)!)$ time complexity. In this post, we introduce a DP algorithm that works in $O(n^2 2^n)$ time complexity and $O(n 2^n)$ space complexity. There are also other methods like branch and bound method that we would not cover in this post.
+The naive brute force method to solve TSP problem has $O((n+1)!)$ time complexity. In this post, we introduce the [DP algorithm](https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm) that works in $O(n^2 2^n)$ time complexity and $O(n 2^n)$ space complexity. There are also other methods like branch and bound method that we would not cover in this post.
 
 # DP Space and Recurrence
 One reason the naive algorithm is inefficient is that it has saved a lot of *unnecessary ordering information* of visited cities and there are actually overlapping between subproblems. Consider two incomplete paths `A B C` and `B A C`, they are actually equavalent because they have visited the same set of cities and have the same current city.
@@ -56,3 +56,7 @@ def simple_tsp(s, e, M):
     complete = (1<<n)-1
     return min(dp[last][complete]+e[last] for last in range(n))
 ```
+
+To test the 
+n = 15
+simple_tsp(arange(n), arange(n), arange(n*n).reshape(n, n))
