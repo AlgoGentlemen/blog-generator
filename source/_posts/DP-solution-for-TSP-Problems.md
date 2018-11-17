@@ -15,7 +15,7 @@ The naive brute force method to solve TSP problem has $O((n+1)!)$ time complexit
 One reason the naive algorithm is inefficient is that it has saved a lot of *unnecessary ordering information* of visited cities and there are actually overlapping between subproblems. Consider two incomplete paths `A B C` and `B A C`, they are actually equavalent because they have visited the same set of cities and have the same current city.
 
 Our DP space intend to capture all intermediate states where some cities are visited but others are not. To eliminate the redundant information or ordering, our DP state space only care the __current city__ and __set of visited cities__. The current city has $n$ choices, and every city except current one could be visited or not. Consequently, the total state space by rule of product is
-$$n 2^(n-1)$$
+$$n 2^{n-1}$$
 To make our later implementation easier, we ignoring that the current city must be visited and use a larger DP space of size $n 2^n$. These extra space however does not affect our result.
 
 Our next step is to write the recurrence of DP. Clearly, we should go to our current state from a previous city. Let's say we are at city $c_m$ and we have visited cities $C=\{c_1, c_2,\ldots, c_{k-1}, c_k\}$. This state is denoted by the tuple $(c_m, C)$. To arrive at current city, we could go from any previous state
