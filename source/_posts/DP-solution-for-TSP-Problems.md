@@ -9,19 +9,21 @@ mathjax: true
 
 Let's consider a variant of TSP problem such that we fix the first city and the last city of this travel and there are $n+2$ cities in total.
 
-The naive brute force method to solve TSP problem has $O((n+1)!)$ time complexity and $O(n)$ extra space. In this post, we introduce an DP algorithm that works in $O(n^2 2^n)$ time complexity and $O(n 2^n)$ space complexity. There are also other methods like branch and bound method that we would not cover in this post.
+The naive brute force method to solve TSP problem has $O((n+1)!)$ time complexity. In this post, we introduce a DP algorithm that works in $O(n^2 2^n)$ time complexity and $O(n 2^n)$ space complexity. There are also other methods like branch and bound method that we would not cover in this post.
 
-# DP Space and recurrence
-One reason the naive algorithm is inefficient is because it has saved a lot unnecessary ordering information of visited cities. As a improvement, our DP state space only care where is the current city and what cities have been visited. Consequently, the total state space is $n 2^n$. (If we take into consideration that the last city has to be choosed, this could be reduced to $n 2^{n-1}$, but it is inconvenient for our later implementation).
+# DP Space and Recurrence
+One reason the naive algorithm is inefficient is because it has saved a lot of unnecessary ordering information of visited cities. As an improvement, our DP state space only care the current city and what cities have been visited. Consequently, the total state space is $n 2^n$. (If we take into consideration that the last city has to be chosen, the state space could be reduced to $n 2^{n-1}$, but it is inconvenient for our later implementation).
 
-Our next step is to write the recurrence of DP. Clearly, we should get our current state by by coming from a previous city. Let's say we are at city $c_m$ and our current visited cities are $C=\{c_1, c_2,\ldots, c_{k-1}, c_k\}$, which is denoted by the tuple $(c_m, C)$. We could go from any previous state $(c_n\in C\setminus\{c_m\}, C\setminus\{c_m\})$ with an extra cost $d(c_m, c_n)$.
+Our next step is to write the recurrence of DP. Clearly, we should go to our current state from a previous city. Let's say we are at city $c_m$ and we have visited cities $C=\{c_1, c_2,\ldots, c_{k-1}, c_k\}$. This state is denoted by the tuple $(c_m, C)$. To arrive at current city, we could go from any previous state
+$$(c_n, C\setminus\{c_m\}),\quad c_n\in C\setminus\{c_m\}$$
+with an extra cost $d(c_m, c_n)$.
 
 
 # Implementation
 ## Representation of Set of Cities
-We use an 32-bit integer to represent the set of cities (less than 32). Existence of the $i$-th city corresponds to $i$-th bit of the integer. 
+We use a 32-bit integer to represent the set of cities (less than 32). Existence of the $i$-th city corresponds to $i$-th bit of the integer. 
 
-## Data Denpendency and DP update
+## Data Dependency and DP updates
 It is obvious that one state only has dependency on other state with a smaller set of cities, which correspondes to a smaller integer in our representation. So we enumerate all set of travelled cities by ascending order of their integer i.e. $0,1,2,\ldots 2^n$.
 
 ## Code
