@@ -14,6 +14,7 @@ There are many ways to represent the 32 counters:
 
 1. We could store 16 counters in one integer and the rest in the other integer. To make it simple, we choose one to count odd bits and the other to count even bits. 
 1. We could store lower bits in one number and higher bits in the other number. This method could better take advantage of bitwise operations, as it has bit to bit correspondence between numbers and low/high counters.
+<!--more-->
 
 ## Two bits groups: count even and odd bits
 This method needs shift operations to align high bits and low bits. Which is not a worry for method 2.
