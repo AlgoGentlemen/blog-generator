@@ -2,6 +2,7 @@
 title: DP solution for TSP Problems
 date: 2018-11-16 21:00:16
 tags:
+mathjax: true
 ---
 
 > From [Wikipedia](https://en.wikipedia.org/wiki/Travelling_salesman_problem): The travelling salesman problem (TSP) asks the following question: "Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city?" It is an NP-hard problem in combinatorial optimization, important in operations research and theoretical computer science. 
