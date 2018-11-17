@@ -1,6 +1,7 @@
 # Blog Generator
+[![Build Status](https://travis-ci.org/CSGentlemen/blog-generator.svg?branch=master)](https://travis-ci.org/CSGentlemen/blog-generator)
 
-This is the blog generator for [CSGentlemen](https://github.com/CSGentlemen/csgentlemen.github.io) [![Build Status](https://travis-ci.org/CSGentlemen/blog-generator.svg?branch=master)](https://travis-ci.org/CSGentlemen/blog-generator)
+This is the blog generator for [CSGentlemen](https://github.com/CSGentlemen/csgentlemen.github.io) 
 
 ## Initialization
 
@@ -22,7 +23,7 @@ This is the blog generator for [CSGentlemen](https://github.com/CSGentlemen/csge
 
 `hexo deploy` or `hexo d`
 
-### Don't forget clean your repo before generating
+### Don't forget to clean your repo before generating
 
 `hexo clean`
 
