@@ -12,6 +12,7 @@ These are some articles that we are interested in writing:
     + lc378. Kth Smallest Element in a Sorted Matrix
     + lc878. Nth Magical Number
     + lc4. Median of two sorted numbers
+    + 29. Divide Two Integers
 + Search Under Equality Constraints
     + lc240. Search a 2D Matrix II
     + lc939. Minimum Area Rectangle
