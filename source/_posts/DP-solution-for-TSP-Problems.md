@@ -24,10 +24,10 @@ with an extra cost $d(c_m, c_n)$.
 We use a 32-bit integer to represent the set of cities (less than 32). Existence of the $i$-th city corresponds to $i$-th bit of the integer. 
 
 ## Data Dependency and DP updates
-It is obvious that one state only has dependency on other state with a smaller set of cities, which correspondes to a smaller integer in our representation. So we enumerate all set of travelled cities by ascending order of their integer i.e. $0,1,2,\ldots 2^n$.
+It is obvious that one state only has dependency on other state with a smaller set of cities, which corresponds to a smaller integer in our representation. So we enumerate all set of travelled cities by ascending order of their integer i.e. $0,1,2,\ldots 2^n-1$.
 
 ## Code
-```python3
+```py
 inf = float('inf')
 def highbit_range(n):
     for h in range(n):
