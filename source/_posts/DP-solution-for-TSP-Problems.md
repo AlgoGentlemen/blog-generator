@@ -9,7 +9,7 @@ mathjax: true
 
 Let's consider a variant of TSP problem such that we fix the first city and the last city of this travel and there are $n+2$ cities in total.
 
-The naive brute force method to solve TSP problem has $O((n+1)!)$ time complexity. In this post, we introduce the [DP algorithm](https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm) that works in $O(n^2 2^n)$ time complexity and $O(n 2^n)$ space complexity. There are also other methods like branch and bound method that we would not cover in this post.
+The naive brute force method to solve TSP problem has $O((n+1)!)$ time complexity. In this post, we introduce a DP algorithm that works in $O(n^2 2^n)$ time complexity and $O(n 2^n)$ space complexity. There are also other methods like branch and bound method that we would not cover in this post.
 
 # DP Space and Recurrence
 One reason the naive algorithm is inefficient is that it has saved a lot of *unnecessary ordering information* of visited cities and there are actually overlapping between subproblems. Consider two incomplete paths `A B C` and `B A C`, they are actually equavalent because they have visited the same set of cities and have the same current city.
@@ -31,8 +31,7 @@ We use a 32-bit integer to represent the set of cities (less than 32). Existence
 It is obvious that one state only has dependency on other state with a smaller set of cities, which corresponds to a smaller integer in our representation. So we enumerate all set of travelled cities by ascending order of their integer i.e. $0,1,2,\ldots 2^n-1$.
 
 ## Code
-```py
-inf = float('inf')
+```pyinf = float('inf')
 def highbit_range(n):
     for h in range(n):
         for i in range(1<<h, 1<<(h+1)):
@@ -44,19 +43,27 @@ def last_two_bits(h, cur):
     l.append(h)
     return ((i, j) for i in l for j in l if i!=j)
 
-def simple_tsp(s, e, M):
-    n = len(M)
+def simple_tsp(d_s, d_e, dist):
+    """
+    Args
+    ====
+    d_s: distance from start to intermediate nodes
+    d_e: distance from intermediate nodes to end
+    dist: The adjacent matrix storing shortest path between each pair of intermediate nodes
+    
+    Example:
+    ====
+    >>> simple_tsp([1,2,3], [4,5,6], [[0,2,4], [2,0,5], [4,5,0]])
+    14
+    """
+    n = len(dist)
     dp = [[inf]*(2**n) for i in range(n)]
     for i in range(n):
-        dp[i][1<<i] = s[i]
+        dp[i][1<<i] = d_s[i]
     for h, cur in highbit_range(n):
         for last, last2 in last_two_bits(h, cur):
             prev = cur^(1<<last)
-            dp[last][cur] = min(dp[last2][prev]+M[last2][last], dp[last][cur])
+            dp[last][cur] = min(dp[last2][prev]+dist[last2][last], dp[last][cur])
     complete = (1<<n)-1
-    return min(dp[last][complete]+e[last] for last in range(n))
+    return min(dp[last][complete]+d_e[last] for last in range(n))
 ```
-
-To test the 
-n = 15
-simple_tsp(arange(n), arange(n), arange(n*n).reshape(n, n))
