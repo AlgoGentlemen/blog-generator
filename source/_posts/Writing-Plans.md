@@ -31,6 +31,7 @@ These are some articles that we are interested in writing:
     + lc84. Largest Rectangle in Histogram
         - lc85. Maximal Rectangle
     + lc316. Remove Duplicate Letters (and get min lexical order subsequence)
+    + lc903. Valid Permutations for DI Sequence
 + Padding?
 + Balanced Trees
     + Interval Tree?
