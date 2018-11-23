@@ -12,7 +12,8 @@ These are some articles that we are interested in writing:
     + lc378. Kth Smallest Element in a Sorted Matrix
     + lc878. Nth Magical Number
     + lc4. Median of two sorted numbers
-    + 29. Divide Two Integers
+    + lc29. Divide Two Integers
+    + lc774. Minimize Max Distance to Gas Station
 + Search Under Equality Constraints
     + lc240. Search a 2D Matrix II
     + lc939. Minimum Area Rectangle
@@ -24,6 +25,7 @@ These are some articles that we are interested in writing:
     + lc818. Race Car
     + lc329. Longest Increasing Path in a Matrix
     + lc115 & lc940. Distinct Subsequences I & II
+    + lc879. Profitable Schemes
 + Onepass Algorithms (one pass after preprocessing: lc316)
     + lc32. Longest Valid Parentheses
     + lc651. 4 Keys Keyboard
@@ -31,6 +33,7 @@ These are some articles that we are interested in writing:
     + lc84. Largest Rectangle in Histogram
         - lc85. Maximal Rectangle
     + lc316. Remove Duplicate Letters (and get min lexical order subsequence)
+    + lc891. Sum of Subsequence Widths
     + lc903. Valid Permutations for DI Sequence
 + Padding?
 + Balanced Trees
@@ -45,6 +48,6 @@ These are some articles that we are interested in writing:
 + Linkedlist skills and Ordered Structure
     + LRU cache
     + Pluggable Queue?
-+ Astar Algorithm
++ Shortest Path Algorithms: BFS, Dijkstra, A*, Floyd, Bellman-Ford
     + lc752. Open the Lock
 + ...

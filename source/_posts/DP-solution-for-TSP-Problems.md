@@ -69,3 +69,7 @@ def simple_tsp(d_s, d_e, dist):
     complete = (1<<n)-1
     return min(dp[last][complete]+d_e[last] for last in range(n))
 ```
+
+## Examples
++ lc847. Shortest Path Visiting All Nodes
++ lc943. Find the Shortest Superstring
