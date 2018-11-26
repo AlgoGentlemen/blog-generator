@@ -1,26 +1,34 @@
 ---
-title: Expectation Maximization
+title: EM算法与Word Alignment
 date: 2018-11-16 00:15:49
-tags: AI
+tags: 
+    - ML
+    - NLP
 mathjax: true
 ---
 
-# Objective
+# EM算法
 
-Maximize the likelihood $$p(X\mid \theta) = \sum_Z p(X,Z\mid \theta)$$
+## 概述
 
-# EM Algorithm
+已有一个对随机变量的观测（Observation）$X$，我们想求出模型参数$\theta$。我们假设X的分布不仅受$\theta$影响，而且还受一个隐变量$Z$影响（$Z$也由$\theta$决定）。
 
-## Input
+所以似然函数（likelihood）可以写为
+\begin{align*}
+L(\theta) &= \log P(X\mid \theta) = \log \sum_Z P(X,Z\mid \theta) \\
+          &= \log (\sum_Z P(X\mid Z,\theta)P(Z\mid \theta))
+\end{align*}
 
-+ Observation **X**
-+ Latent variable **Z**
-+ Joint distribution $p(X,Z\mid \theta)$
-+ Conditional distribution $p(Z\mid X, \theta)$
+## 算法输入
 
-## Output
++ 观测量 $X$
++ 隐变量 $Z$
++ 联合分布 $p(X,Z\mid \theta)$
++ 条件分布 $p(Z\mid X, \theta)$
 
-Parameter $\theta$
+## 算法输出
+
+参数$\theta = \arg\max_\theta L(\theta)$
 <!--more-->
 
 ## Procedure
