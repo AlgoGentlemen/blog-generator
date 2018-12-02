@@ -31,7 +31,7 @@ Onepass的核心是dp，dp的核心在于caching，在算法的进程中不断�
 
 > Given *n* non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
 
-![LC84](/images/Onepass/LC84.png)
+![](/images/Onepass/LC84.png)
 
 这一道题代表一系列的题目，算法的核心在于构建一个stack，在每一个时刻都保持stack是一个我们想要的状态。对于这一题来说，我们想要这个stack里保持递增，这样遇到下一个比`stack[-1]`要小的值，我们可以依次pop出`stack`内比它大的值，来对pop出的单元格进行计算。
 
