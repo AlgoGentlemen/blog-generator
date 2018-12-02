@@ -2,7 +2,9 @@
 title: 试谈一下Onepass算法
 mathjax: true
 date: 2018-12-01 14:58:22
-tags: Onepass, dynamic programming
+tags:
+  - Onepass
+  - Dynamic Programming
 ---
 
 ### 所谓Onepass算法
