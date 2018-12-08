@@ -139,7 +139,7 @@ menu:
   home: / || home
   #about: /about/ || user
   tags: /tags/ || tags
-  鉴&屑: /likes/ || likes
+  鉴与屑: /likes/ || heart
   #categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
